@@ -24,8 +24,6 @@ class PB_Accordion_Blocks {
 	 */
 	public $plugin_version;
 
-
-
 	/**
 	 * Class constructor
 	 * Sets up the plugin, including registering scripts.
@@ -110,7 +108,7 @@ class PB_Accordion_Blocks {
 
 		if ($load_scripts_globally || has_block('pb/accordion-item', get_the_ID())) {
 			wp_enqueue_script('pb-accordion-blocks-frontend-script');
-			wp_enqueue_style('pb-accordion-blocks-style');	
+			wp_enqueue_style('pb-accordion-blocks-style');
 		}
 	}
 
@@ -121,7 +119,7 @@ class PB_Accordion_Blocks {
 	 */
 	public function enqueue_assets_on_render($output) {
 		wp_enqueue_script('pb-accordion-blocks-frontend-script');
-		wp_enqueue_style('pb-accordion-blocks-style');	
+		wp_enqueue_style('pb-accordion-blocks-style');
 		return $output;
 	}
 
